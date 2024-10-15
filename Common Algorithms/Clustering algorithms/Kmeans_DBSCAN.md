@@ -30,12 +30,8 @@ K-means is a partitioning-based clustering algorithm that divides the dataset in
 
 ### Loss Function
 The loss function for K-means is the sum of squared distances between points and their corresponding centroids:
-\[ 
-L = \sum_{i=1}^{K} \sum_{x_j \in C_i} ||x_j - \mu_i||^2 
-\]
-where:
-- \( C_i \) is the ith cluster,
-- \( \mu_i \) is the centroid of the ith cluster.
+
+**Loss = Σ (for each cluster) Σ (for each point in cluster) ||point - centroid||²**
 
 ### Handling Missing Data
 - **Imputation**: Fill in missing values using methods like mean, median, or more sophisticated techniques.
@@ -53,8 +49,8 @@ Common distance metrics used in K-means include:
 DBSCAN is a density-based clustering algorithm that groups together points that are closely packed while marking points in low-density regions as outliers.
 
 ### Algorithm Steps
-1. **Select Parameters**: Define the parameters \( \epsilon \) (the radius) and MinPts (minimum points required to form a dense region).
-2. **Identify Core Points**: A point is a core point if it has at least MinPts points within the \( \epsilon \) neighborhood.
+1. **Select Parameters**: Define the parameters epsilon (ε) and MinPts (minimum points required to form a dense region).
+2. **Identify Core Points**: A point is a core point if it has at least MinPts points within the ε neighborhood.
 3. **Form Clusters**: Connect core points with their neighbors to form clusters. Expand clusters until all points in a neighborhood are classified.
 4. **Identify Outliers**: Points that are neither core points nor directly reachable from core points are marked as noise.
 
@@ -64,7 +60,7 @@ DBSCAN is a density-based clustering algorithm that groups together points that 
 - **Handles noise and outliers effectively**.
 
 ### Parameters and Their Influence
-- **Epsilon (\( \epsilon \))**: Determines the size of the neighborhood; a smaller \( \epsilon \) may lead to many points being classified as noise.
+- **Epsilon (ε)**: Determines the size of the neighborhood; a smaller ε may lead to many points being classified as noise.
 - **MinPts**: A higher MinPts value requires a denser area to form a cluster.
 
 ### Strengths and Weaknesses
@@ -73,7 +69,7 @@ DBSCAN is a density-based clustering algorithm that groups together points that 
   - Can discover clusters of varying shapes and sizes.
   
 - **Weaknesses**:
-  - Requires careful tuning of parameters \( \epsilon \) and MinPts.
+  - Requires careful tuning of parameters ε and MinPts.
   - Struggles with high-dimensional data due to the curse of dimensionality.
 
 ### Evaluating Performance
