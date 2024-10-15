@@ -29,21 +29,23 @@ K-means is a partitioning-based clustering algorithm that divides the dataset in
   - Assumes spherical clusters.
 
 ### Loss Function
-- The loss function for K-means is the sum of squared distances between points and their corresponding centroids:
-  \[
-  L = \sum_{i=1}^{K} \sum_{x_j \in C_i} ||x_j - \mu_i||^2
-  \]
-  where \( C_i \) is the ith cluster and \( \mu_i \) is the centroid of the ith cluster.
+The loss function for K-means is the sum of squared distances between points and their corresponding centroids:
+\[ 
+L = \sum_{i=1}^{K} \sum_{x_j \in C_i} ||x_j - \mu_i||^2 
+\]
+where:
+- \( C_i \) is the ith cluster,
+- \( \mu_i \) is the centroid of the ith cluster.
 
 ### Handling Missing Data
 - **Imputation**: Fill in missing values using methods like mean, median, or more sophisticated techniques.
 - **Removal**: Exclude data points with missing values or remove features with many missing values.
 
 ### Distance Metrics
-- Common distance metrics used in K-means include:
-  - **Euclidean Distance**: Measures straight-line distance.
-  - **Manhattan Distance**: Measures grid-based distance.
-  - **Minkowski Distance**: Generalizes both Euclidean and Manhattan distances.
+Common distance metrics used in K-means include:
+- **Euclidean Distance**: Measures straight-line distance.
+- **Manhattan Distance**: Measures grid-based distance.
+- **Minkowski Distance**: Generalizes both Euclidean and Manhattan distances.
 
 ## DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
 
